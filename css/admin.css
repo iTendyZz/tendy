@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Oi";
+    src: url("../fonts/Oi-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Neucha";
+  src: url("../fonts/Neucha-Regular.ttf");
+}
+
+body {
+    margin: 0 0 0 0;
+    background-color: #FFCC33;
+}
+
+nav {
+    display: flex; 
+    width: 100%;
+    height: 50px;
+    background-color: #FFCC33;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.329);
+}
+
+nav a{
+    display: block;
+    font-family: "Oi";
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #FFCC00;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    font-family: "Oi";
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: #CC9933;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+nav button {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    min-width: 140px;
+    min-height: 40px;
+    border: 0;
+    font-family: "Oi";
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+}
+
+.feedback-info {
+    width: 25%;
+    height: 50%;
+    border-radius: 15px;
+    border: black solid;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.712);
+}
+
+.message-block {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+}
+
+.message-block h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.message-block small {
+    color: #666;
+    font-size: 0.8em;
+}

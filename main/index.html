@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTendyZz</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/png" href="../images/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg" />
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="iTendyZz" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+    <header>
+        <a href="https://github.com/iTendyZz">
+            iTendyZz
+        </a>
+    </header>
+    <nav>
+        <a href="https://steamcommunity.com/id/itendyz/">
+            Steam
+        </a>
+        <a href="https://www.discord.gg/VYY9awD2tY">
+            Discord
+        </a>
+        <a href="https://www.twitch.tv/itendyzz">
+            Twitch
+        </a>
+        <button type="submit" id="feedback">
+            Связаться со мной
+        </button>
+        <a href="admin.php">
+            Админская панель
+        </a>
+    </nav>
+    <!-- Форма обратной связи -->
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Обратная связь</h2>
+            <form id="feedback-form" action="save_feedback.php" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="mail" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение..." required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <main>
+        <div class="game-info">
+            <a href="https://store.steampowered.com/app/730/CounterStrike_2/" style="background-image: url('../images/cs2.jpg');"></a>
+            <div>
+                <p>
+                    Наиграно: 590 часов <br>
+                    Звание: Серебро: Элита
+                </p>
+            </div>
+        </div>
+        <div class="game-info">
+            <a href="https://store.steampowered.com/app/570/Dota_2/" style="background-image: url('../images/dota2.jpg');"></a>
+            <div>
+                <p>
+                    Наиграно: 2290 часов <br>
+                    Рейтинг: 1113 (Страж III) <br>
+                    Позиции: Поддержка
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="../js/index.js">
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('ServiceWorker registered');
+            })
+            .catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+        }
+    </script>
+</body>
+</html>
